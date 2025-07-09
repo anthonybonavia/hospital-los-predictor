@@ -65,7 +65,7 @@ def load_and_train():
 
 # once at top-level, split data and stash it so load_and_train can reuse it:
 if "splitter" not in st.session_state:
-    df0 = pd.read_excel("hospital_los_20250709.xlsx").dropna(subset=["hospital_los_days"])
+    df0 = pd.read_csv("hospital_los_20250709.csv").dropna(subset=["hospital_los_days"])
     df0["mechanically_ventilated"] = df0["mechanically_ventilated"].map({True:1,False:0})
     df0["sepsis3"]                 = df0["sepsis3"].map({True:1,False:0})
     df0["los_gt_10"] = (df0["hospital_los_days"] > 10).astype(int)
