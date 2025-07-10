@@ -34,6 +34,25 @@ This repository contains `los_app2.py`, a Streamlit application for predicting i
    ```bash
    pip install --upgrade pip
    pip install -r requirements2.txt
+
+4. **Create a `.gitignore` file** in the root of your repo with the following contents:
+
+   ```gitignore
+   # Python
+   __pycache__/
+   *.py[cod]
+   .venv/
+   env/
+   venv/
+   
+   # Streamlit
+   .streamlit/
+   
+   # Data
+   *.csv
+   ```
+
+   This ensures that temporary files, your virtual environment, and large data files are not committed.
    ```
 
 ---
